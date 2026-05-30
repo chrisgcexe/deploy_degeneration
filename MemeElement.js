@@ -117,8 +117,8 @@ class MemeElement {
             let br = { x: cacheW - random(0, jx), y: cacheH - random(0, jy) };
             let bl = { x: random(0, jx), y: cacheH - random(0, jy) };
 
-            let segs = 4; // Pocos segmentos para añadir micro-imperfecciones orgánicas
-            let micro = 2.0; // Jitter minúsculo
+            let segs = 3; // Pocos segmentos para añadir micro-imperfecciones orgánicas
+            let micro = 1.6; // Jitter minúsculo
             
             // Borde superior
             for(let i=0; i<=segs; i++) p.push({ x: lerp(tl.x, tr.x, i/segs), y: lerp(tl.y, tr.y, i/segs) + (i>0 && i<segs ? random(-micro, micro) : 0) });
