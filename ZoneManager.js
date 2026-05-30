@@ -50,9 +50,7 @@ class ZoneManager {
                 rect(z.x, z.y, z.w, z.h);
             }
             
-            fill(0);
-            textSize(20 / cam.zoom);
-            text(z.name, z.x + 10, z.y + 20);
+            // Ocultamos los nombres de debug ('WORKTABLE' y 'POOL') para la versión final
         }
         pop();
     }

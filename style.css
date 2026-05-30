@@ -5,7 +5,7 @@ body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
     width: 100vw; height: 100vh;
     background-image: url('fondo_papel_1.jpg');
     background-size: cover;
-    opacity: 0.3; /* Opacidad sobre el fondo blanco para lavarla perfectamente */
+    opacity: 0.55; /* Opacidad aumentada para dar más textura al papel */
 }
 #defaultCanvas0 { 
     position: absolute; 

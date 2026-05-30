@@ -110,15 +110,15 @@ class MemeElement {
             
             let p = [];
             // Esquinas asimétricas (corte chueco general)
-            let jx = min(cacheW * 0.04, 8); 
-            let jy = min(cacheH * 0.06, 8); 
+            let jx = min(cacheW * 0.08, 15); 
+            let jy = min(cacheH * 0.1, 15); 
             let tl = { x: random(0, jx), y: random(0, jy) };
             let tr = { x: cacheW - random(0, jx), y: random(0, jy) };
             let br = { x: cacheW - random(0, jx), y: cacheH - random(0, jy) };
             let bl = { x: random(0, jx), y: cacheH - random(0, jy) };
 
-            let segs = 3; // Pocos segmentos para añadir micro-imperfecciones orgánicas
-            let micro = 1.5; // Jitter minúsculo
+            let segs = 6; // Más segmentos para añadir imperfecciones orgánicas notorias
+            let micro = 4.0; // Jitter más grande para bordes desprolijos
             
             // Borde superior
             for(let i=0; i<=segs; i++) p.push({ x: lerp(tl.x, tr.x, i/segs), y: lerp(tl.y, tr.y, i/segs) + (i>0 && i<segs ? random(-micro, micro) : 0) });
